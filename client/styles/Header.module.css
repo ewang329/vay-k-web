@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  background-color: #3B586B;
+  padding: 5px 15px;
+}
+
+#title {
+  margin: auto;
+  color: white;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+}
+
+#logo {
+  width: 50px;
+}
+
+#logoBrand {
+  font-weight: 500;
+  font-size: larger;
+  color: white;
+}
+
+.navDropdown {
+  background-color: #72CBD0;
+  color: white;
+  list-style-type: none;
+  position: absolute;
+  right: 0;
+  border-radius: 15px;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  width: 150px;
+}
+
+.navDropdown > li > a {
+  width: 100%;
+  display: inline-block;
+  padding: 10px 20px;
+}
+
+.navDropdown > li:hover {
+  font-weight: 800;
+}

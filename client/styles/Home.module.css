@@ -1,41 +1,7 @@
-.header {
-  display: flex;
-  align-items: center;
-  background-color: #3B586B;
-  padding: 5px 15px;
+.container {
+
 }
 
-#logo {
-  width: 50px;
-}
-
-#logoBrand {
-  font-weight: 500;
-  font-size: larger;
-  color: #F9EFC7;
-}
-
-.hamburger {
-  margin-left: auto;
-}
-
-.navDropdown {
-  background-color: #72CBD0;
-  color: white;
-  list-style-type: none;
-  position: absolute;
-  right: 0;
-  border-radius: 15px;
-  margin: 0;
-  padding: 0;
-  cursor: pointer;
-  width: 150px;
-}
-
-.navDropdown > li {
-  padding: 10px 20px;
-}
-
-.navDropdown > li:hover {
-  font-weight: 800;
+.main {
+    
 }

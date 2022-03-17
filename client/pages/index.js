@@ -1,11 +1,7 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import { Spin as Hamburger } from 'hamburger-react'
-import { useState } from 'react'
 
 export default function Home() {
-  const [isOpen, setOpen] = useState(false)
-
   return (
     <div className={styles.container}>
       <Head>
@@ -14,25 +10,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <header className={styles.header}>
-        <img id={styles.logo} src="/logo.png"/>
-        <span id={styles.logoBrand}>Vay-K</span>
-        <div className={styles.hamburger}>
-          <Hamburger
-            toggled={isOpen}
-            toggle={setOpen}
-            color="white"
-          />
-          {isOpen ? (
-              <ul className={styles.navDropdown}>
-              <li><a>Trips</a></li>
-              <li><a>Account Info</a></li>
-              <li><a>Log out</a></li>
-            </ul>
-          ) : null}
-        
-        </div>
-      </header>
+      
       <main className={styles.main}>
        
       </main>
@@ -40,3 +18,4 @@ export default function Home() {
     </div>
   )
 }
+Home.title = ""
