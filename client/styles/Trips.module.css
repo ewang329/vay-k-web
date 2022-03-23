@@ -1,0 +1,25 @@
+.tripBoxContainer {
+    margin: 20px 0;
+    display: block;
+}
+
+.tripBox {
+    display: flex;
+    background-color: #F9EFC7;
+    color: #8E884A;
+    width: 60%;
+    margin: auto;
+    align-items: center;
+    box-shadow: 5px 10px 10px #ccc;
+    border-radius: 5px;
+}
+
+.tripBox > img {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+}
+
+.locationContainer > span {
+    margin-right: 5px;
+}
