@@ -26,6 +26,7 @@
 }
 
 .navDropdown {
+  z-index: 1;
   background-color: #72CBD0;
   color: white;
   list-style-type: none;
