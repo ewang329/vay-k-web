@@ -1,0 +1,27 @@
+.boxContainer {
+    display: flex;
+    align-items: center;
+    margin-left: -8px;
+}
+
+.boxContainer > .dottedLine {
+    border-style: dashed;
+    width: 50px;
+}
+
+.box {
+    background-color: #F9EFC7;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+
+.box > h3 {
+    margin: 0;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.box > p {
+    margin: 0;
+    font-size: 14px;
+}

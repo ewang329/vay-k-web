@@ -1,0 +1,17 @@
+.cityContainer {
+    display: flex;
+    align-items: center;
+}
+
+.dottedLine {
+    border: none;
+    border-top: 3px dotted #8E884A;
+    color: #fff;
+    background-color: #fff;
+    height: 1px;
+    width: 30px;
+}
+
+.location {
+    margin-left: 10px;
+}

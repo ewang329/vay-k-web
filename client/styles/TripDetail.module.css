@@ -5,10 +5,83 @@
 
 .leftPane {
     width: 40%;
+    display: flex;
+    flex-flow: column;
+}
+
+.circle > svg {
+    width: 35px;
+    height: 35px;;
+}
+
+.addIconWrapper {
+    margin-top: 15px;
+}
+
+.addIconWrapper > span {
+    height: 25px;
+}
+
+.addIconContainer {
+    width: 15px;
+    height: 15px;
+}
+
+
+
+.timelineContainerWrapper {
+    position: relative;
+    height: 100%;
+    padding-top: 15px;
+}
+
+.timelineContainer {
+    display: flex;
+    flex-flow: column;
+}
+
+.dayContentContainer {
+    display: flex;
+    flex-flow: column;
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.dayContentContainer > div {
+    margin-bottom: 10px;
+}
+
+.line {
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: -1;
+    height: 100%;
+    width: 5px;
+    background-color: #8E884A;
+}
+
+.circle {
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #3B586B;
+    color: white;
 }
 
 .rightPane {
-    width: 60%;
+    margin-left: auto;
+    width: 58%;
+}
+
+.miniCircle {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #8E884A;
 }
 
 .topMenuContainer {
