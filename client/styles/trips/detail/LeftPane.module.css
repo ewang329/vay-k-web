@@ -1,33 +1,8 @@
-.tripDetailContainer {
-    display: flex;
-    margin: 20px 50px;
-}
-
 .leftPane {
     width: 40%;
     display: flex;
     flex-flow: column;
 }
-
-.circle > svg {
-    width: 35px;
-    height: 35px;;
-}
-
-.addIconWrapper {
-    margin-top: 15px;
-}
-
-.addIconWrapper > span {
-    height: 25px;
-}
-
-.addIconContainer {
-    width: 15px;
-    height: 15px;
-}
-
-
 
 .timelineContainerWrapper {
     position: relative;
@@ -72,11 +47,6 @@
     color: white;
 }
 
-.rightPane {
-    margin-left: auto;
-    width: 58%;
-}
-
 .miniCircle {
     width: 12px;
     height: 12px;
@@ -84,33 +54,20 @@
     background-color: #8E884A;
 }
 
-.topMenuContainer {
-    display: flex;
-    background-color: #C4C4C4;
-    padding: 10px;
-    border-radius: 10px;
-}
-
-.topMenuContainer > div {
-    height: 30px;
-    width: 30px;
-    margin: auto;
-}
-
-.topMenuContainer svg {
-    width: 30px;
-    position: absolute;
-}
-
-.topMenuContainer > div:hover > svg {
+.circle > svg {
     width: 35px;
-    cursor: pointer;
+    height: 35px;;
 }
 
-.menuContent {
-    min-height: 500px;
-    background-color: #C4C4C4;
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 10px;
+.addIconWrapper {
+    margin-top: 15px;
+}
+
+.addIconWrapper > span {
+    height: 25px;
+}
+
+.addIconContainer {
+    width: 15px;
+    height: 15px;
 }

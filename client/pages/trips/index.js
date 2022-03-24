@@ -1,4 +1,4 @@
-import styles from '../../styles/Trips.module.css'
+import styles from '../../styles/trips/Trips.module.css'
 
 export default function Trips() {
 
@@ -49,7 +49,7 @@ export default function Trips() {
 
             {data.map(trip => {
                 return (
-                    <a href={"/trips/" + trip.id} className={styles.tripBoxContainer}>
+                    <a key={trip.id} href={"/trips/" + trip.id} className={styles.tripBoxContainer}>
                         <div className={styles.tripBox}>
                             <img src="/logo.png"/>
                             <div>
@@ -57,7 +57,7 @@ export default function Trips() {
                                 <span>{trip.startDate} - {trip.endDate}</span>
                                 <div className={styles.locationContainer}>
                                     {trip.locations.map((l, i) =>
-                                        <span>{l.city}, {l.country}{i == trip.locations.length - 1 ? "" : ";"}</span>
+                                        <span key={i}>{l.city}, {l.country}{i == trip.locations.length - 1 ? "" : ";"}</span>
                                     )}
                                 </div>
                             </div>

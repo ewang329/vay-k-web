@@ -1,4 +1,4 @@
-import styles from '../../styles/trips/CityContainer.module.css'
+import styles from '../../../styles/trips/detail/CityContainer.module.css'
 
 export default function CityContainer({ state, city }) {
 

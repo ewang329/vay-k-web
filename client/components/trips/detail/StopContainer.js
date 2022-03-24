@@ -1,4 +1,4 @@
-import styles from '../../styles/trips/StopContainer.module.css'
+import styles from '../../../styles/trips/detail/StopContainer.module.css'
 
 export default function stopContainer() {
     return (

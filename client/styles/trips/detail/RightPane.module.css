@@ -1,0 +1,35 @@
+.rightPane {
+    margin-left: auto;
+    width: 58%;
+}
+
+.topMenuContainer {
+    display: flex;
+    background-color: #C4C4C4;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.topMenuContainer > div {
+    height: 30px;
+    width: 30px;
+    margin: auto;
+}
+
+.topMenuContainer svg {
+    width: 30px;
+    position: absolute;
+}
+
+.topMenuContainer > div:hover > svg {
+    width: 35px;
+    cursor: pointer;
+}
+
+.menuContent {
+    min-height: 500px;
+    background-color: #C4C4C4;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
