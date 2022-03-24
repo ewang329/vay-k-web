@@ -1,7 +1,7 @@
-import styles from '../../../styles/trips/detail/LeftPane.module.css'
-import StopContainer from '../../trips/detail/StopContainer';
-import BoxContainer from '../../trips/detail/BoxContainer';
-import CityContainer from '../../trips/detail/CityContainer';
+import styles from '../../../../styles/trips/detail/leftPane/LeftPane.module.css'
+import StopContainer from './StopContainer';
+import BoxContainer from './BoxContainer';
+import CityContainer from './CityContainer';
 
 export default function LeftPane() {
     return (

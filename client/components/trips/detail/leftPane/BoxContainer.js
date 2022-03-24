@@ -1,4 +1,4 @@
-import styles from '../../../styles/trips/detail/BoxContainer.module.css'
+import styles from '../../../../styles/trips/detail/leftPane/BoxContainer.module.css'
 
 export default function BoxContainer({ title, details }) {
 

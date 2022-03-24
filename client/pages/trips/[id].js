@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/trips/detail/TripDetail.module.css'
-import RightPane from '../../components/trips/detail/RightPane';
-import LeftPane from '../../components/trips/detail/LeftPane';
+import RightPane from '../../components/trips/detail/rightPane/RightPane';
+import LeftPane from '../../components/trips/detail/leftPane/LeftPane';
 
 const data = {
     id: 1,

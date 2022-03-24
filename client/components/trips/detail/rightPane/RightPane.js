@@ -1,11 +1,11 @@
-import styles from '../../../styles/trips/detail/RightPane.module.css'
+import styles from '../../../../styles/trips/detail/rightPane/RightPane.module.css'
 import { useState } from 'react'
-import Chat from '../../trips/Chat';
-import Flight from '../../trips/Flight';
-import Lodge from '../../trips/Lodge';
-import Map from '../../trips/Map';
-import Photo from '../../trips/Photo';
-import Webpage from '../../trips/Webpage';
+import Chat from './Chat';
+import Flight from './Flight';
+import Lodge from './Lodge';
+import Map from './Map';
+import Photo from './Photo';
+import Webpage from './Webpage';
 
 const components = {
     chat: <Chat/>,
