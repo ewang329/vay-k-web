@@ -10,12 +10,12 @@
     width: 60%;
     margin: auto;
     align-items: center;
-    box-shadow: 5px 10px 10px #ccc;
+    box-shadow: 5px 10px 10px #eeeded;
     border-radius: 5px;
 }
 
 .tripBox:hover {
-    box-shadow: 10px 15px 15px #ccc;
+    box-shadow: 10px 15px 15px #eeeded;
 }
 
 .tripBox > img {

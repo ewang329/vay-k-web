@@ -5,6 +5,10 @@
     color: #8E884A;
 }
 
+.leftPane > span {
+    margin-left: 3px;
+}
+
 .timelineContainerWrapper {
     position: relative;
     height: 100%;
