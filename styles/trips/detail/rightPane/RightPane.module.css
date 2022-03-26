@@ -27,6 +27,7 @@
 }
 
 .menuContent {
+    position: relative;
     min-height: 500px;
     background-color: #eeeded;
     margin-top: 10px;
