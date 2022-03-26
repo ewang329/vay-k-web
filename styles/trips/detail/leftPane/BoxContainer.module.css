@@ -11,7 +11,13 @@
 .box {
     background-color: #F9EFC7;
     border-radius: 5px;
+    margin-bottom: 10px;
     padding: 10px 15px;
+    cursor: pointer;
+}
+
+.box:hover {
+    box-shadow: 5px 10px 10px #eeeded;
 }
 
 .box > h3 {
