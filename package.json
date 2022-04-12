@@ -21,7 +21,8 @@
     "react-dom": "17.0.2",
     "zustand": "^3.7.2",
     "supertokens-auth-react": "^0.20.4",
-    "supertokens-node": "^9.1.2"
+    "supertokens-node": "^9.1.2",
+    "tabler-icons-react": "^1.44.0"
   },
   "devDependencies": {
     "eslint": "8.11.0",
