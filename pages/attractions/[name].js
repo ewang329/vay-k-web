@@ -1,6 +1,15 @@
 import { useRouter } from 'next/router'
 import styles from '../../styles/attractions/Index.module.css'
 import Webpage from '../../components/trips/detail/rightPane/Webpage'
+import dynamic from 'next/dynamic'
+import EmailPassword from 'supertokens-auth-react/recipe/emailpassword'
+
+const EmailPasswordAuthNoSSR = dynamic(
+  new Promise<typeof EmailPassword.EmailPasswordAuth>((res) =>
+    res(EmailPassword.EmailPasswordAuth)
+  ),
+  { ssr: false }
+)
 
 
 export default function AttractionIndex() {
@@ -28,17 +37,19 @@ export default function AttractionIndex() {
     }
  
     return (
-        <div className={styles.container}>
-            <h3>{data.title}</h3>
-            <div className={styles.imageContentContainer}>
-                <div className={styles.imageContainer}>
-                    <img src={data.images[0]} />
+        <EmailPasswordAuthNoSSR>
+            <div className={styles.container}>
+                <h3>{data.title}</h3>
+                <div className={styles.imageContentContainer}>
+                    <div className={styles.imageContainer}>
+                        <img src={data.images[0]} />
+                    </div>
+                    <div className={styles.webpageContent}>
+                        <Webpage />
+                    </div>
                 </div>
-                <div className={styles.webpageContent}>
-                    <Webpage />
-                </div>
+                <p>{data.description}</p>
             </div>
-            <p>{data.description}</p>
-        </div>
+        </EmailPasswordAuthNoSSR>
     )
 }
