@@ -3,6 +3,17 @@ import { useEffect } from 'react';
 import styles from '../../styles/trips/detail/TripDetail.module.css'
 import RightPane from '../../components/trips/detail/rightPane/RightPane';
 import LeftPane from '../../components/trips/detail/leftPane/LeftPane';
+import React from 'react'
+import dynamic from 'next/dynamic'
+import EmailPassword from 'supertokens-auth-react/recipe/emailpassword'
+import ProtectedPage from "./protectedPage";
+
+const EmailPasswordAuthNoSSR = dynamic(
+  new Promise<typeof EmailPassword.EmailPasswordAuth>((res) =>
+    res(EmailPassword.EmailPasswordAuth)
+  ),
+  { ssr: false }
+)
 
 export default function TripDetail() {
     const router = useRouter()
@@ -19,10 +30,12 @@ export default function TripDetail() {
     }, [id]);
  
     return (
-        <div className={styles.tripDetailContainer}>
-            <LeftPane id={id} />
-            <RightPane />
-        </div>
+        <EmailPasswordAuthNoSSR>
+            <div className={styles.tripDetailContainer}>
+                <LeftPane id={id} />
+                <RightPane />
+            </div>
+        </EmailPasswordAuthNoSSR>
     )
 }
-// TripDetail.title = `${data.title} (${data.startDate} - ${data.endDate})`
+TripDetail.title = `${data.title} (${data.startDate} - ${data.endDate})`
