@@ -6,7 +6,6 @@ import LeftPane from '../../components/trips/detail/leftPane/LeftPane';
 import React from 'react'
 import dynamic from 'next/dynamic'
 import EmailPassword from 'supertokens-auth-react/recipe/emailpassword'
-import ProtectedPage from "./protectedPage";
 
 const EmailPasswordAuthNoSSR = dynamic(
   new Promise<typeof EmailPassword.EmailPasswordAuth>((res) =>
