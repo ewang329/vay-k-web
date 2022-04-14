@@ -1,7 +1,7 @@
 import styles from '../../styles/trips/Trips.module.css'
 
 export async function getServerSideProps() {
-    const res = await fetch(`http://localhost:5000/trips`)
+    const res = await fetch(`http://vay-k.herokuapp.com/trips`)
     const json = await res.json()
 
     return { props: { data: json.data } }
