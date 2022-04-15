@@ -52,7 +52,7 @@ export default function LeftPane() {
                         return (
                             <div key={`trip-${d.day}`}>
                                 <span className={styles.circle}>{d.day}</span>
-                                <div className={styles.dayContentContainer}>
+                                <div className={`${styles.dayContentContainer}`}>
                                     {d.places.map((p, i) => {
                                         const containers = []
                                         if (p.city) {
