@@ -1,8 +1,8 @@
 import styles from '../../../../styles/trips/detail/leftPane/StopContainer.module.css'
 
-export default function stopContainer() {
+export default function stopContainer({ index }) {
     return (
-        <div className={`${styles.stopContainer} stop-container`}>
+        <div className={`${styles.stopContainer} dropzone`} data-index={index}>
             <div className={styles.plusIconContainer}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
                     {/* <!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --> */}
