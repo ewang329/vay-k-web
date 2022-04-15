@@ -1,13 +1,56 @@
 import styles from '../../styles/trips/Trips.module.css'
 
-export async function getServerSideProps() {
-    const res = await fetch(`http://vay-k.herokuapp.com/trips`)
-    const json = await res.json()
+// export async function getServerSideProps() {
+//     const res = await fetch(`http://vay-k.herokuapp.com/trips`)
+//     const json = await res.json()
 
-    return { props: { data: json.data } }
-}
+//     return { props: { data: json.data } }
+// }
 
-export default function Trips({ data }) {
+const data = [
+    {
+        'id': 1,
+        'title': '~~~~~~~~Trip',
+        'startDate': '02/03/2022',
+        'endDate': '02/06/2022',
+        'locations': [{
+            'state': 'GA',
+            'city': 'Atlanta',
+            'country': 'USA'
+        }, {
+            'state': 'FL',
+            'city': 'Miami',
+            'country': 'USA'
+        }, {
+            'state': 'TN',
+            'city': 'Nashville',
+            'country': 'USA'
+        }]
+    }, {
+        'id': 2,
+        'title': 'Winter Break',
+        'startDate': '12/13/2022',
+        'endDate': '01/06/2023',
+        'locations': [{
+            'state': '',
+            'city': 'Cancun',
+            'country': 'Mexico'
+        }]
+    }, {
+        'id': 3,
+        'title': 'Family Trip',
+        'startDate': '01/21/2023',
+        'endDate': '02/12/2023',
+        'locations': [{
+            'state': '',
+            'city': 'London',
+            'country': 'UK'
+        }]
+    },
+]
+
+// export default function Trips({ data }) {
+export default function Trips() {
     return (
         <div className={styles.tripContainer}>
             {data.map(trip => {
