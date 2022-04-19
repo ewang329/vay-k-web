@@ -1,12 +1,10 @@
 import { useEffect } from "react"
-import useStore from '../../../../store/store';
 import styles from '../../../../styles/trips/detail/rightPane/Photo.module.css'
 import stopContainerStyles from '../../../../styles/trips/detail/leftPane/StopContainer.module.css'
 
 const images = ['https://picsum.photos/200', 'https://picsum.photos/200', 'https://picsum.photos/200']
 
 export default function Photo() {
-    const addTripPlace = useStore(state => state.addTripPlace);
 
     useEffect(() => {
         let dragged
@@ -48,22 +46,6 @@ export default function Photo() {
                 event.target.classList.remove(stopContainerStyles.magnified)
                 let stopIconHTML = event.target.innerHTML
                 dragged.parentNode.removeChild(dragged)
-                event.target.innerHTML = `
-                    <form id='form' style='left: 0;margin-left: -90px;'>
-                        <div style='margin-bottom: 8px;'>
-                            <label>Location</label>
-                            <input type='text' required />
-                        </div>
-                        <div>
-                            <label>Type</label>
-                            <select required>
-                                <option value='attraction'>Attraction</option>
-                                <option value='airport'>Airport</option>
-                            </select>
-                        </div>
-                        <input type='submit' value='Submit' style="margin-top: 8px;" />
-                    </form>
-                `
                 event.target.firstElementChild.addEventListener('submit', e => {
                     e.preventDefault();
                     // POST call to add a stop

@@ -6,6 +6,19 @@
     margin-bottom: 10px;
 }
 
+.form {
+    left: 0;
+    margin-left: -90px;
+}
+
+.form > div, .formText {
+    margin-bottom: 8px;
+}
+
+.submit {
+    margin-top: 8px;
+}
+
 .magnified {
     border: 3px dashed red;
     border-radius: 10px;

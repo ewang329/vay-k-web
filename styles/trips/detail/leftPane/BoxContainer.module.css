@@ -8,6 +8,11 @@
     width: 50px;
 }
 
+.flightDetails > p {
+    margin: 0;
+    font-size: 14px;
+}
+
 .box {
     background-color: #F9EFC7;
     border-radius: 5px;
