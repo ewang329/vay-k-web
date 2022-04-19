@@ -1,24 +1,28 @@
 import { useRouter } from 'next/router'
+import { useEffect } from 'react';
 import styles from '../../styles/trips/detail/TripDetail.module.css'
 import RightPane from '../../components/trips/detail/rightPane/RightPane';
 import LeftPane from '../../components/trips/detail/leftPane/LeftPane';
 
-const data = {
-    id: 1,
-    title: 'Spring Break Road Trip',
-    startDate: 'Feb 03, 2022',
-    endDate: 'Feb 06, 2022'
-}
-
 export default function TripDetail() {
     const router = useRouter()
     const { id } = router.query
+
+    useEffect(() => {
+        const getTrips = async () => {
+            const res = await fetch(`http://localhost:5000/trips`)
+            const json = await res.json()
+            debugger;
+            TripDetail.title = `${json.title} (${json.startDate} - ${json.endDate})`
+        };
+        getTrips();
+    }, [id]);
  
     return (
         <div className={styles.tripDetailContainer}>
-            <LeftPane />
+            <LeftPane id={id} />
             <RightPane />
         </div>
     )
 }
-TripDetail.title = `${data.title} (${data.startDate} - ${data.endDate})`
+// TripDetail.title = `${data.title} (${data.startDate} - ${data.endDate})`
