@@ -2,7 +2,7 @@ import { useEffect } from "react"
 import styles from '../../../../styles/trips/detail/rightPane/Photo.module.css'
 import stopContainerStyles from '../../../../styles/trips/detail/leftPane/StopContainer.module.css'
 
-const images = ['https://picsum.photos/200', 'https://picsum.photos/200', 'https://picsum.photos/200']
+const images = ['https://picsum.photos/200', 'https://picsum.photos/200', 'https://picsum.photos/200','https://picsum.photos/200', 'https://picsum.photos/200','https://picsum.photos/200', 'https://picsum.photos/200','https://picsum.photos/200', 'https://picsum.photos/200']
 
 export default function Photo() {
 
@@ -67,7 +67,7 @@ export default function Photo() {
     return (
         <div className={styles.photoContainer}>
             {images.map((_, i) => (
-                <img key={i} draggable="true" src='https://picsum.photos/200' />
+                <img key={i} draggable="true" src={`https://picsum.photos/200?random=${i}`} />
             ))}
         </div>
     )

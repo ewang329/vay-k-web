@@ -1,5 +1,5 @@
 import styles from '../../../../styles/trips/detail/rightPane/RightPane.module.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Flight from './Flight';
 import Lodge from './Lodge';
 import Map from './Map';
@@ -18,8 +18,13 @@ export default function RightPane() {
     const [selectedMenu, changeMenu] = useState('')
     const onMenuSelected = (e) => {
         const menu = e.target.closest('div').dataset['menu']
+        console.log(menu)
         changeMenu(menu)
     }
+
+    useEffect(() => {
+        changeMenu("webpage")
+    }, [])
 
     return (
         <div className={styles.rightPane}>

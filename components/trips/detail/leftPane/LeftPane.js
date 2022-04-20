@@ -18,6 +18,8 @@ export default function LeftPane(props) {
         getTrips();
     }, [props]);
 
+    console.log(trips);
+    
     return (
         <div className={styles.leftPane}>
             <span>day</span>

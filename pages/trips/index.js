@@ -13,7 +13,7 @@ const EmailPasswordAuthNoSSR = dynamic(
 )
 
 export async function getServerSideProps() {
-    const res = await fetch(`http://localhost:5000/trips`)
+    const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/trips`)
     const json = await res.json()
 
     return { props: { data: json.data } }

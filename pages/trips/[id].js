@@ -20,7 +20,7 @@ export default function TripDetail() {
 
     useEffect(() => {
         const getTrips = async () => {
-            const res = await fetch(`http://localhost:5000/trips`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/trips`)
             const data = await res.json()
             const trip = data.data.find(t => t.id == id)
             console.log(trip.title)

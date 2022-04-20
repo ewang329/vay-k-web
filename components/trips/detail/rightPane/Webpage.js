@@ -1,20 +1,22 @@
 import styles from '../../../../styles/trips/detail/rightPane/Webpage.module.css'
 
 export default function Webpage() {
+    
     const data = [
-        {
-            title: "Webpage name",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        {
-            title: "Webpage name",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        },
-        {
-            title: "Webpage name",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
-        }
-    ]
+            {
+                title: "Wikipedia",
+                description: "The Vizcaya Museum and Gardens, previously known as Villa Vizcaya, is the former villa and estate of businessman James Deering, of the Deering McCormick-International Harvester fortune, on Biscayne Bay in the present day Coconut Grove neighborhood of Miami, Florida"
+            },
+            {
+                title: "Garden Visit",
+                description: "The garden was made during the First World War using many features, including steps, balustrades, fountians and finials, purchased in Italy or copied from ..."
+            },
+            {
+                title: "Abby Meister",
+                description: "Vizcaya Museum & Gardens is a must-visit in Miami, FL. The historic, gorgeous house and gardens were inspired by the Italian and French..."
+            },
+        ]
+
 
     return (
         <div>
