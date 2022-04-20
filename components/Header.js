@@ -1,7 +1,6 @@
 import { Spin as Hamburger } from 'hamburger-react'
-import React, { useEffect } from 'react';
-import { useState } from 'react'
-import { signOut } from 'supertokens-auth-react/recipe/emailpassword'
+import React, { useEffect, useState } from 'react';
+import { signOut } from "supertokens-auth-react/recipe/emailpassword"; 
 
 import { useRouter } from 'next/router'
 import styles from '../styles/Header.module.css'

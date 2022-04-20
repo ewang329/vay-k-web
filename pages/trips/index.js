@@ -84,6 +84,7 @@ export default function Trips({ data }) {
                                         {trip.locations.map((l, i) =>
                                             <span key={i}>{l.city}, {l.country}{i == trip.locations.length - 1 ? "" : ";"}</span>
                                         )}
+                                    </div>
                                 </div>
                             </div>
                         </a>

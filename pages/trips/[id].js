@@ -21,11 +21,15 @@ export default function TripDetail() {
     useEffect(() => {
         const getTrips = async () => {
             const res = await fetch(`http://localhost:5000/trips`)
-            const json = await res.json()
-            debugger;
-            TripDetail.title = `${json.title} (${json.startDate} - ${json.endDate})`
+            const data = await res.json()
+            const trip = data.data.find(t => t.id == id)
+            console.log(trip.title)
+            // TripDetail.title = "test";
+            TripDetail.title = `${trip.title} (${trip.startDate} - ${trip.endDate})`
         };
-        getTrips();
+        if (id) {
+            getTrips();
+        }
     }, [id]);
  
     return (
@@ -37,4 +41,4 @@ export default function TripDetail() {
         </EmailPasswordAuthNoSSR>
     )
 }
-TripDetail.title = `${data.title} (${data.startDate} - ${data.endDate})`
+// TripDetail.title = `${data.title} (${data.startDate} - ${data.endDate})`
