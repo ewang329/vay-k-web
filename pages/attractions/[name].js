@@ -4,6 +4,7 @@ import Webpage from '../../components/trips/detail/rightPane/Webpage'
 import dynamic from 'next/dynamic'
 import EmailPassword from 'supertokens-auth-react/recipe/emailpassword'
 import { Textarea, Image } from "@mantine/core"
+import { useState } from "react"
 
 const EmailPasswordAuthNoSSR = dynamic(
   // new Promise<typeof EmailPassword.EmailPasswordAuth>((res) =>
@@ -17,6 +18,7 @@ const EmailPasswordAuthNoSSR = dynamic(
 export default function AttractionIndex() {
     const router = useRouter()
     const { name } = router.query
+    const [notes, setNotes] = useState("");
 
     const data = {
         title: 'Viscaya Museum & Gardens',
@@ -54,7 +56,7 @@ export default function AttractionIndex() {
                         <Webpage />
                     </div>
                 </div>
-                <Textarea label="Personal Notes" value={data.description} />
+                <Textarea label="Personal Notes" placeholder={data.description}/>
             </div>
         </EmailPasswordAuthNoSSR>
     )
