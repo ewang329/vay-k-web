@@ -24,7 +24,6 @@ export default function TripDetail() {
             const data = await res.json()
             const trip = data.data.find(t => t.id == id)
             console.log(trip.title)
-            // TripDetail.title = "test";
             TripDetail.title = `${trip.title} (${trip.startDate} - ${trip.endDate})`
         };
         if (id) {

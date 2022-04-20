@@ -1,26 +1,22 @@
-import {useEffect} from 'react';
+import {useEffect, useState} from 'react';
 import useStore from '../../../../store/store';
 import styles from '../../../../styles/trips/detail/leftPane/LeftPane.module.css'
 import StopContainer from './StopContainer';
 import BoxContainer from './BoxContainer';
 import CityContainer from './CityContainer';
 
-
 export default function LeftPane(props) {
-    const trips = useStore((state) => state.trips);
-    const setTrips = useStore((state) => state.setTrips);
+    const [trips, setTrips] = useState([])
 
     useEffect(() => {
         if (!props.id) return
         const getTrips = async () => {
-            console.log(props.id);
-            const res = await fetch(`http://localhost:5000/trips/${props.id}/itinerary`)
+            const res = await fetch(`${process.env.NEXT_PUBLIC_SERVER}/trips/${props.id}/itinerary`)
             const json = await res.json()
             setTrips(json.data);
         };
         getTrips();
     }, [props]);
-
 
     return (
         <div className={styles.leftPane}>
@@ -33,30 +29,26 @@ export default function LeftPane(props) {
                             <div key={`trip-${d.day}`}>
                                 <span className={styles.circle}>{d.day}</span>
                                 <div className={`${styles.dayContentContainer}`}>
-                                    {d.locations ? d.locations.map((p, i) => {
+                                    {d.places ? d.places.map((p, i) => {
                                         const containers = []
                                         if (p.city) {
                                             containers.push(<CityContainer city={p.city.name} state={p.city.state} />)
-                                        } else if (p.attraction) {
+                                        } else if (p.Attraction) {
                                             // if the previous place is also attraction, display stop button
-                                            if (d.locations[i - 1] && d.locations[i - 1].attraction) {
+                                            if (d.places[i - 1] && d.places[i - 1].Attraction) {
                                                 containers.push(<StopContainer index={i} />)
                                             }
-                                            containers.push(<BoxContainer title={p.attraction.name} details={p.attraction.details} />)
+                                            containers.push(<BoxContainer title={p.Attraction.name} details={p.Attraction.details} />)
                                         }
                                         return (
                                             <div key={`trip-${d.day}-place-${i}`}>{containers.map(c => c)}</div>
                                         )
                                     }) : null}
-                                    <StopContainer index={d.locations ? d.locations.length : 0} />
+                                    <StopContainer index={d.places ? d.places.length : 0} />
                                 </div>
                             </div>
                         )
                     }) : null}
-                    <span className={styles.circle}>2</span>
-                    <div className={`${styles.circle} ${styles.addIconWrapper}`}>
-                        <span>+</span>
-                    </div>
                 </div>
             </div>
         </div>

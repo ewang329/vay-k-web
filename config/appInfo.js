@@ -1,5 +1,5 @@
-export let apiDomain;
-export let webDomain;
+let apiDomain;
+let webDomain;
 
 if (process.env.NODE_ENV == "development") {
     apiDomain = "http://localhost:3000";
@@ -8,7 +8,7 @@ if (process.env.NODE_ENV == "development") {
     apiDomain = "https://vay-k-web.vercel.app";
     webDomain = "https://vay-k-web.vercel.app";
 }
-export const appInfo = {
+const appInfo = {
   // learn more about this on https://supertokens.com/docs/emailpassword/appinfo
   appName: "Vay-k",
   apiBasePath: "/api/auth",
@@ -17,3 +17,4 @@ export const appInfo = {
   apiDomain
 }
 
+export { appInfo };
